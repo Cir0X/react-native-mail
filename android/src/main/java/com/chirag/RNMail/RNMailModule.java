@@ -91,6 +91,7 @@ public class RNMailModule extends ReactContextBaseJavaModule {
         File file = new File(path);
         Uri p = Uri.fromFile(file);
         i.putExtra(Intent.EXTRA_STREAM, p);
+        i.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
       }
     }
 
